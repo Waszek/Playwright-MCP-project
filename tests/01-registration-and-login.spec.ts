@@ -1,13 +1,6 @@
 import { test } from '@playwright/test';
 import { RegisterPage, LoginPage, ProtectedPage } from '../pages';
-
-const TEST_USER = {
-  firstName: 'John',
-  lastName: 'Tester',
-  email: `test-user-${Date.now()}@example.com`,
-  birthDate: '1990-01-15',
-  password: 'TestPassword123!',
-};
+import { TEST_USER } from '../fixtures/test-data';
 
 test.describe.serial('User Registration and Login E2E Tests', () => {
   /**
